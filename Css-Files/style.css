@@ -1725,13 +1725,14 @@ footer h3{
     .navigation-bar nav ul li a{
         padding: 0 5px;
         font-weight: lighter;
-        font-size: 11px;
+        font-size: 10px;
     }
 
     .navigation-bar nav ul li a .span-cart{
-        top: 0px;
-        left: 10px;
-        font-size: 16px;
+        top: 5px;
+        left: 16px;
+        font-size: 11px;
+        font-weight: bold;
         background: none;
     }
 
@@ -1803,10 +1804,10 @@ footer h3{
     }
 
     .navigation-bar nav ul li a .span-cart{
-        top: 0px;
+        top: 8px;
         left: 15px;
         font-size: 12px;
-        background: none;
+        /* background: none; */
     }
 
     .navigation-bar nav ul li .fa-cart-plus::after{
