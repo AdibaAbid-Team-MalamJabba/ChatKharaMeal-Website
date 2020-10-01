@@ -1,0 +1,372 @@
+
+{
+    "fastFoodProducts":[
+        {
+            "id":"1",
+            "title": "Chicken Burger",
+            "price": 200,
+            "view": "../categories/fast-food-folder/chicken-burger.html",
+            "image":"../images/fastfood-images/chicken-burger-02.jpg"
+        },
+        {
+            "id":"2",
+            "title": "Hot Shots",
+            "price": 180,
+            "view": "../categories/fast-food-folder/hot-shots.html",
+            "image":"../images/fastfood-images/chickenshots.png"
+        },
+        {
+            "id":"3",
+            "title": "Beef Cheese Burger",
+            "price": 300,
+            "view": "../categories/fast-food-folder/beef-cheese-burger.html",
+            "image":"../images/fastfood-images/beef-cheese-burger.jpg"
+        },
+        {
+            "id":"4",
+            "title": "Club Sandwich",
+            "price": 230,
+            "view": "../categories/fast-food-folder/club-sandwitch.html",
+            "image":"../images/fastfood-images/club-sandwich.jpg"
+        },
+        {
+            "id":"5",
+            "title": "Fresh Pasta",
+            "price": 300,
+            "view": "../categories/fast-food-folder/fresh-pasta.html",
+            "image":"../images/fastfood-images/pasta.jpg"
+        },
+        {
+            "id":"6",
+            "title": "Delicious Lasagna",
+            "price": 320,
+            "view": "../categories/fast-food-folder/delicious-lasagnia.html",
+            "image":"../images/fastfood-images/lasagna.jpg"
+        },
+        {
+            "id":"7",
+            "title":"Fried Wings",
+            "price": 80,
+            "view": "../categories/fast-food-folder/fried-wings.html",
+            "image":"../images/fastfood-images/wings.jpg"
+        },
+        {
+            "id":"8",
+            "title":  "Zinger Burger",
+            "price": 340,
+            "view": "../categories/fast-food-folder/chicken-burger.html",
+            "image":"../images/fastfood-images/zinger-burger.jpg"
+        },
+        {
+            "id":"9",
+            "title": "Pizza Fries",
+            "price": 200,
+            "view": "../categories/fast-food-folder/pizza-fries.html",
+            "image":"../images/fastfood-images/pizza-fries.jpg"
+        },
+        {
+            "id":"10",
+            "title": "Spicy Broast",
+            "price": 200,
+            "view": "../categories/fast-food-folder/spicy-broast.html",
+            "image":"../images/fastfood-images/broast.jpg"
+        },
+        {
+            "id":"11",
+            "title": "Loaded Fries",
+            "price": 220,
+            "view": "../categories/fast-food-folder/loaded-fries.html",
+            "image":"../images/fastfood-images/best-loaded-fries.jpg"
+        },
+        {
+            "id":"12",
+            "title": "Plain Salted Fries",
+            "price": 150,
+            "view": "../categories/fast-food-folder/plain-salted-fries.html",
+            "image":"../images/fastfood-images/plain-fries.jpg"
+        }
+
+    ],
+    "BakeryItemProducts":[
+        {
+            "id":"1",
+            "title":"Banana Bread",
+            "price":200,
+            "view": "../categories/bakery-folder/banana-bread.html",
+            "image":"../images/bakeryitem-images/banana-bread.jpg"
+        },
+        {
+            "id":"2",
+            "title":"Cake Rusk",
+            "price":50,
+            "view": "../categories/bakery-folder/cake-rusk.html",
+            "image":"../images/bakeryitem-images/Cake-Rusk-2.jpg"
+        },
+        {
+            "id":"3",
+            "title":"Chicken Rolls",
+            "price":30,
+            "view": "../categories/bakery-folder/chicken-roll.html",
+            "image":"../images/bakeryitem-images/rolls.jpg"
+        },
+        {
+            "id":"4",
+            "title":"Mango Pie",
+            "price":180,
+            "view": "../categories/bakery-folder/mango-pie.html",
+            "image":"../images/bakeryitem-images/pie.jpg"
+        },
+        {
+            "id":"5",
+            "title":"Chicken Samosas",
+            "price":20,
+            "view": "../categories/bakery-folder/chicken-cheese-samosa.html",
+            "image":"../images/bakeryitem-images/samosas.jpg"
+        },
+        {
+            "id":"6",
+            "title":"Croissant",
+            "price":40,
+            "view": "../categories/bakery-folder/fresh-croissant.html",
+            "image":"../images/bakeryitem-images/snacks-croissant.jpg"
+        },
+        {
+            "id":"7",
+            "title":"Chicken Patties",
+            "price":30,
+            "view": "../categories/bakery-folder/chicken-patties.html",
+            "image":"../images/bakeryitem-images/chicken-patties.jpg"
+        },
+        {
+            "id":"8",
+            "title":"Cinnabon Rolls",
+            "price":40,
+            "view": "../categories/bakery-folder/cinnamon-ball.html",
+            "image":"../images/bakeryitem-images/cinnabon-rolls.jpg"
+        },
+        {
+            "id":"9",
+            "title":"Fresh Bread",
+            "price":80,
+            "view": "../categories/bakery-folder/banana-bread.html",
+            "image":"../images/bakeryitem-images/bread-02.jpg"
+        },
+        {
+            "id":"10",
+            "title":"Shaslik Sticks",
+            "price":30,
+            "view": "../categories/bakery-folder/shahslik-sticks.html",
+            "image":"../images/bakeryitem-images/chicken.shashlik.sizzler.jpg"
+        },
+        {
+            "id":"11",
+            "title":"Chicken Sticks",
+            "price":20,
+            "view": "../categories/bakery-folder/chicken-stick.html",
+            "image":"../images/bakeryitem-images/chicken-sticks.jpg"
+        },
+        {
+            "id":"12",
+            "title":"Chicken Pakorey",
+            "price":20,
+            "view": "../categories/bakery-folder/chicken-pakoray.html",
+            "image":"../images/bakeryitem-images/chicken-crispyPakorey.jpg"
+        }
+    ],
+    "Snacksproducts":[
+        {
+            "id":"1",
+            "title":"Crinkle Chips",
+            "price":50,
+            "view": "../categories/snacks-folder/crinkle-chips.html",
+            "image":"../images/Snacks-images/Crinkle-chips.jpg",
+            "address": "#"
+        },
+        {
+            "id":"2",
+            "title":"Caramel Popcorn",
+            "price":100,
+            "view": "../categories/snacks-folder/cramel-popcorn.html",
+            "image":"../images/Snacks-images/caramel-popcorn.jpg",
+            "address": "#"
+        },
+        {
+            "id":"3",
+            "title":"Cookies",
+            "price":50,
+            "view": "../categories/snacks-folder/cookies.html",
+            "image":"../images/Snacks-images/cookies.jpg",
+            "address": "#"
+        },
+        {
+            "id":"4",
+            "title":"Spicy Nacho's",
+            "price":150,
+            "view": "../categories/snacks-folder/spicy-nachos.html",
+            "image":"../images/Snacks-images/nachos.jpg",
+            "address": "#"
+        },
+        {
+            "id":"5",
+            "title":"Plain Popcorn",
+            "price":80,
+            "view": "../categories/snacks-folder/plain-popcorn.html",
+            "image":"../images/Snacks-images/popcorn.jpg",
+            "address": "#"
+        },
+        {
+            "id":"6",
+            "title":"Spicy Peanuts",
+            "price":50,
+            "view": "../categories/snacks-folder/spicy-peanuts.html",
+            "image":"../images/Snacks-images/spicy-peanuts2.jpg",
+            "address": "#"
+        },
+        {
+            "id":"7",
+            "title":"Namak Parey",
+            "price":40,
+            "view": "../categories/snacks-folder/namak-paray.html",
+            "image":"../images/Snacks-images/namak-paray.jpg",
+            "address": "#"
+        },
+        {
+            "id":"8",
+            "title":"Chocolate Cookies",
+            "price":50,
+            "view": "../categories/snacks-folder/chocolate-cookies.html",
+            "image":"../images/Snacks-images/chocolate-cookies2.jpg",
+            "address": "#"
+        },
+        {
+            "id":"9",
+            "title":"Salted Chips",
+            "price":50,
+            "view": "../categories/snacks-folder/salted-chips.html",
+            "image":"../images/Snacks-images/salted-chips.jpeg",
+            "address": "#"
+        },
+        {
+            "id":"10",
+            "title":"Nimco Mix",
+            "price":50,
+            "view": "../categories/snacks-folder/nimco-mix.html",
+            "image":"../images/Snacks-images/nimco_mix.jpeg",
+            "address": "#"
+        },
+        {
+            "id":"11",
+            "title":"Daal Nimco",
+            "price":50,
+            "view": "../categories/snacks-folder/daal-nimco.html",
+            "image":"../images/Snacks-images/moong-dal-nimco.jpg",
+            "address": "#"
+        },
+        {
+            "id":"12",
+            "title":"Masala Papdi",
+            "price":50,
+            "view": "../categories/snacks-folder/masala-papdi.html",
+            "image":"../images/Snacks-images/masala_papdi_gathia.jpg",
+            "address": "#"
+        }
+    ],
+    "chatkharaMealProducts":[
+        {
+            "id":"1",
+            "title":"Chana Mong Papdi",
+            "price":50,
+            "view": "../categories/chatkhara-folder/chana-moong-papdi.html",
+            "image":"../images/chatkhara-images/chana-moong-papdi-chat.jpg",
+            "address": "#"
+        },
+        {
+            "id":"2",
+            "title":"Chatkhara Chiken",
+            "price":60,
+            "view": "../categories/chatkhara-folder/chatkhara-chicken.html",
+            "image":"../images/chatkhara-images/chatkhara-chicken.jpg",
+            "address": "#"
+        },
+        {
+            "id":"3",
+            "title":"Papdi Chat",
+            "price":80,
+            "view": "../categories/chatkhara-folder/papri-chat.html",
+            "image":"../images/chatkhara-images/papri-chat.jpg",
+            "address": "#"
+        },
+        {
+            "id":"4",
+            "title":"Tikka Sticks",
+            "price":60,
+            "view": "../categories/chatkhara-folder/tikka-sticks.html",
+            "image":"../images/chatkhara-images/tikka-sticks.jpg",
+            "address": "#"
+        },
+        {
+            "id":"5",
+            "title":"Gol Gappey",
+            "price":120,
+            "view": "../categories/chatkhara-folder/gol-gappay.html",
+            "image":"../images/chatkhara-images/gol-gappay.jpg",
+            "address": "#"
+        },
+        {
+            "id":"6",
+            "title":"Keema Naan",
+            "price":150,
+            "view": "../categories/chatkhara-folder/keema-naan.html",
+            "image":"../images/chatkhara-images/keema-naan.jpg",
+            "address": "#"
+        },
+        {
+            "id":"7",
+            "title":"Chatkharey Pakorey",
+            "price":40,
+            "view": "../categories/chatkhara-folder/pakorey.html",
+            "image":"../images/chatkhara-images/pakorey.jpg",
+            "address": "#"
+        },
+        {
+            "id":"8",
+            "title":"Dhaleem",
+            "price":100,
+            "view": "../categories/chatkhara-folder/haleem.html",
+            "image":"../images/chatkhara-images/dhaleem.jpg",
+            "address": "#"
+        },
+        {
+            "id":"9",
+            "title":"Cheese Pakorey",
+            "price":120,
+            "view": "../categories/chatkhara-folder/cheese-pakoda.html",
+            "image":"../images/chatkhara-images/cheese-pakoda-recipe-2.jpg",
+            "address": "#"
+        },
+        {
+            "id":"10",
+            "title":"Pizza Bread",
+            "price":130,
+            "view": "../categories/chatkhara-folder/easy-pizza-toast.html",
+            "image":"../images/chatkhara-images/easy-pizza-toast-4.jpg",
+            "address": "#"
+        },
+        {
+            "id":"11",
+            "title":"Peri Bites",
+            "price":20,
+            "view": "../categories/chatkhara-folder/peri-bites.html",
+            "image":"../images/chatkhara-images/peri-bites.jpg",
+            "address": "#"
+        },
+        {
+            "id":"12",
+            "title":"Dahi Bhalley",
+            "price":120,
+            "view": "../categories/chatkhara-folder/dahi-bhalla.html",
+            "image":"../images/chatkhara-images/Dahi-Bhalla.jpg",
+            "address": "#"
+        }
+    ]
+}

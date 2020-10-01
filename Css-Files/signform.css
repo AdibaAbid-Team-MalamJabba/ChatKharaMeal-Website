@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&display=swap");
+
+
+/* Styling Sign In Page */
+.modal{
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 999; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto; 
+  padding: 30px;
+  border: 1px solid #888;
+  width: 40%; 
+  position: relative;
+  border-radius: 5px;
+}
+
+.modal-content .button-container{
+  text-align: center;
+}
+
+.button-container .toggle-btn{ 
+  padding: 10px 30px;
+  outline: none;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  background-color: #990066;
+  border-radius: 5px;
+}
+
+form {
+  width: 100%;
+}
+
+form#formSignUp{
+  display: none;
+}
+
+form .header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+form .header i{
+  cursor: pointer;
+  padding: 5px 10px;
+  color: #fff;
+  background-color: #990066;
+  border-radius: 3px;
+}
+
+.form-control{
+  margin-bottom: 10px;
+	padding-bottom: 20px;
+  position: relative;
+  width: 100%;
+}
+
+.form-control label {
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.form-control input {
+  box-sizing: border-box;
+	border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	font-family: inherit;
+	font-size: 14px;
+	padding: 10px;
+  width: 100%;
+  border-bottom: 4px solid #990066;
+  outline: none;
+}
+
+.form-flex{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+} 
+
+.form-flex h6{
+  margin: 0;
+}
+
+.form-flex a{
+  color: #990066;
+}
+
+.form-control i{
+  position: absolute;
+  top: 37px;
+  right: 10px;
+  visibility: hidden;
+}
+
+.form-control small{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.form-control.success input{
+  border-color: #990066;
+}
+
+.form-control.error input{
+  border-color: #FF6600;
+}
+
+.form-control.success i.fa-check-circle{
+  color: #990066;
+  visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle{
+  color: #FF6600;
+  visibility: visible;
+}
+
+.form-control.error small{
+  color: #FF6600;
+  visibility: visible;
+}
+
+form#formlogIn button , form#formSignUp button{
+	background-color: #990066;
+  border: none;
+  outline: none;
+	border-radius: 5px;
+	color: #fff;
+	display: block;
+	font-size: 20px;
+	padding: 10px;
+	margin-top: 20px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.form-last{
+  margin: 20px 0 0 0;
+  text-align: right;
+}
+
+.form-last a{
+  color: #990066;
+  text-align: right;
+}
+
+
+@media only screen and (max-width:576px) {
+  .modal-content {
+    width: 60%; 
+    padding: 20px;
+  }
+
+  form .header i{
+    font-size: 10px;
+    padding: 3px 5px;
+  }
+
+  .button-container .toggle-btn{ 
+    padding: 5px 15px;
+  }
+    
+  .form-control input{
+    font-size: 14px;
+    padding: 5px;
+    border-bottom: 2px solid #990066;
+  }
+
+  .form-control label{
+    font-size: 12px;
+  }
+
+  form#formlogIn button , form#formSignUp button{
+    font-size: 14px;
+    padding: 7px;    
+  }
+
+  .form-last a{
+    font-size: 10px;
+  }
+
+  .form-last{
+    margin: 10px 0 0 0;
+  }
+}
+
+

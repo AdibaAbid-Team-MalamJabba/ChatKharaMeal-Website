@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fav Icon -->
+    <link rel="icon" href="./images/Logo/favicon.png" type="image/x-icon">
+    <!-- Slick Slider -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- ICON Link-->
+    <script src="https://kit.fontawesome.com/418d14164c.js" crossorigin="anonymous"></script>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="./Css-Files/style.css" />
+    <!-- Model Styling -->
+    <link rel="stylesheet" href="./Css-Files/signform.css">
+    <link rel="stylesheet" href="./Css-Files/loader.css">
+
+    <title>Chatkhara Meal | Taste to Chatkhara hee Chalega!</title>
+</head>
+
+<body onload="preLoaderHandler()">
+    <div id="loader"></div>
+
+    <!-- Header Starts -->
+    <header>
+        <div class="topNav">
+            <div class="topnav-left">
+                <h5>Welcome <span id="userGreetingName">User</span> To Chatkhara Meal</h5>
+            </div>
+            <div class="search-container">
+                <form action="#">
+                  <input type="text" placeholder="Search Here.." class="search-input">
+                  <button type="submit" class="search-btn"> <i class="fas fa-search"></i></button>
+                </form>
+                <div class="form-right">
+                    <button class="btn-tool-tip">
+                        <a href="#"><i class="fas fa-heart"></i></a>
+                    </button>
+                    <button class="btn-tool-tip"><a href="#">
+                            <i class="fas fa-user-circle" onclick="document.getElementById('myModal').style.display='block'"></i></a>
+                    </button>
+                </div>
+              </div>
+        </div>
+        <div class="midNav">
+             <a href="./index.html"><img src="./images/Logo/Logo-Chatkhara-01.png"alt="Chatkhara Meal Logo"></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#menu-section">Menu</a></li>
+                <li><a href="aboutUS.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          
+            <i class="fas fa-bars"></i>
+              
+        </div>
+        
+    </header>
+    <!-- Header Ends -->
+
+    <!-- Navigation categories -->
+    <div class="navigation-bar">
+        <nav class="nav-categories">
+            <ul>
+                <li><a href="./categories/fastFood.html"><i class="fas fa-hamburger"></i> FastFood</a></li>
+                <li><a href="./categories/snacks.html"><i class="fas fa-cookie"></i> Snacks</a></li>
+                <li><a href="./categories/bakery-items.html"><i class="fas fa-bread-slice"></i> Bakery</a></li>
+                <li><a href="./categories/chatkhara.html"><i class="fab fa-hotjar"></i> Chatkhara Meal</a></li>
+                <li class="add-to-cart">
+                    <a href="./checkOut.html" >
+                        <span class="span-cart">0</span>
+                        <i class="fas fa-cart-plus"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!-- Navigation categories Ends-->
+
+    <!-- Slider Starts -->
+    <div class="slider">
+
+        <div class="my-slider">
+
+            <div class="slider-content">
+                <img src="images/slider-images/slider-1.jpg">
+                <div class="slider-desc">
+                    <h1>Taste to Chatkhara Hi Chalega</h1>
+                </div>
+
+            </div>
+
+            <div class="slider-content">
+                <img src="images/slider-images/slider-2.jpg">
+                <div class="slider-desc">
+                    <h1>Rock Your Whole Mouth!!</h1>
+                </div>
+            </div>
+
+            <div class="slider-content">
+                <img src="images/slider-images/slider-3.jpg">
+                <div class="slider-desc">
+                    <h1>Tickle your taste buds with chatkhara meal</h1>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Slider Buttons -->
+        <button class="slider-btn prev-btn"><i class="fas fa-arrow-left"></i></button>
+        <button class="slider-btn next-btn"><i class="fas fa-arrow-right"></i></button>
+
+    </div>
+    <!-- Slider Ends -->
+
+    <main>
+        <!-- Menu Category -->
+        <section id="menu-section">
+
+            <div class="small-container">
+
+                <h2 class="title">Our Menu</h2>
+
+                <div class="row">
+                    <div class="col-4">
+                        <img src="./images/menu-images/fast-food.jpg" alt="products">
+                        <h2>Fast Food</h2>
+                        <p>Burger, Pizza, Fries, Pasta, Lasagna, & Many More...</p>
+                        <a href="categories/fastFood.html"><button type="button" class="menu-btn">See More <i class="fas fa-angle-double-right"></i></button></a>
+                    </div>
+                    <div class="col-4">
+                        <img src="./images/menu-images/bakery-items.jpg" alt="products">
+                        <h2>Bakery Items</h2>
+                        <p>Samoosey, Rolls, Patties, Chicken Bite & Many More...</p>
+                        <a href="categories/bakery-items.html"><button type="button" class="menu-btn">See More <i class="fas fa-angle-double-right"></i></button></a>
+                    </div>
+                    <div class="col-4">
+                        <img src="./images/menu-images/snacks.jpg" alt="products">
+                        <h2>Snacks</h2>
+                        <p>Chips, Nimco, Daal Mong, Cookies, and Many More...</p>
+                        <a href="categories/snacks.html"><button type="button" class="menu-btn">See More <i class="fas fa-angle-double-right"></i></button></a>
+                    </div>
+                    <div class="col-4">
+                        <img src="./images/menu-images/gol-gappay.jpg" alt="products">
+                        <h2>Chatkhara Food</h2>
+                        <p>Chana Chat, Dahi Baley, Gol Gappy and Many More...</p>
+                        <a href="categories/chatkhara.html"><button type="button" class="menu-btn">See More <i class="fas fa-angle-double-right"></i></button></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Menu Category End -->
+
+        <!-- Latest Product Feature -->
+        <section class="Product-feature">
+            <div>
+                <h2>Our Latest Product</h2>
+            </div>
+
+            <section class="latest-product-feature">
+
+                <div class="product-item">
+                    <div class="img-wrapper">
+                        <img src="images/bakeryitem-images/snacks-croissant.jpg" alt="Fresh croissant">
+                    </div>
+                    <div class="product-desc">
+                        <h2 class="product-title">Fresh Croissant</h2>
+                        <p class="product-price">Rs: <span>20</span>.00/-</p>
+                        <div class="product-btn-container">
+                            <a class="product-btn"><i class="fas fa-list-ul"></i> Wishlist</a>
+                            <a href="./products/product-croissant.html" target = "_blank" class="product-btn"><i class="fas fa-eye"></i> View</a>
+                        </div>
+                        <div class="add-container">
+                            <a class="product-btn cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item">
+                    <div class="img-wrapper">
+                        <img src="images/chatkhara-images/gol-gappay.jpg" alt="gol-gappay">
+                    </div>
+                    <div class="product-desc">
+                        <h2 class="product-title">Chatkharey Gol Gappy</h2>
+                        <p class="product-price">Rs: <span>50</span>.00/-</p>
+                        <div class="product-btn-container">
+                            <a  class="product-btn"><i class="fas fa-list-ul"></i> Wishlist</a>
+                            <a href="./products/product-golgappay.html" target = "_blank" class="product-btn"><i class="fas fa-eye"></i> View</a>
+                        </div>
+                        <div class="add-container">
+                            <a class="product-btn cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="img-wrapper">
+                        <img src="images/fastfood-images/beef-cheese-burger.jpg" alt="beef-cheese-burger">
+                    </div>
+                    <div class="product-desc">
+                        <h2 class="product-title">Beef Cheese Burger</h2>
+                        <p class="product-price">Rs: <span>300</span>.00/-</p>
+                        <div class="product-btn-container">
+                            <a class="product-btn"><i class="fas fa-list-ul"></i> Wishlist</a>
+                            <a href="./products/product-beefcheeseBurger.html" target = "_blank" class="product-btn"><i class="fas fa-eye"></i> View</a>
+                        </div>
+                        <div class="add-container">
+                            <a  class="product-btn cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item">
+                    <div class="img-wrapper">
+                        <img src="images/Snacks-images/masala_papdi_gathia.jpg" alt="masala_papdi_gathia">
+                    </div>
+                    <div class="product-desc">
+                        <h2 class="product-title">Masala Papdi</h2>
+                        <p class="product-price">Rs: <span>50</span>.00/-</p>
+                        <div class="product-btn-container">
+                            <a class="product-btn"><i class="fas fa-list-ul"></i> Wishlist</a>
+                            <a href="./categories/snacks-folder/masala-papdi.html" target = "_blank" class="product-btn"><i class="fas fa-eye"></i> View</a>
+                        </div>
+                        <div class="add-container">
+                            <a class="product-btn cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!-- Latest Product Feature End -->
+
+    </main>
+
+    <!-- Subscribe Section -->
+    <section class="subscribe">
+        <div class="subscribe-container">
+            <div class="subscribe-row">
+                 
+                    <h1>Welcome To Chatkhara-Meal</h1>
+                    
+                    <p>Subscribe To Get Latest Offers From Us.</p>
+                    <form>
+                       <div class="input-group">
+                          <input type="text" class="subscribe-input" placeholder="Enter Email ..." >
+                          <div class="input-group-append">
+                            <button class="btn-subscribe" type="button" >Subscribe</button>
+                          </div>
+                        </div>
+                    </form>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Model Signin Signup -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+
+            <div class="button-container">
+                <button type="button" class="toggle-btn" id="toggle-login">Log In</button>
+                <button type="button" class="toggle-btn" id="toggle-signup">Sign Up</button>
+            </div>
+
+
+            <form class="form" id="formlogIn">
+            
+                <div class="header">
+                    <h2>Log In</h2>
+                    <i class="fas fa-times" onclick="document.getElementById('myModal').style.display='none'"></i>
+                </div>
+
+
+                <div class="form-control ">
+                    <label for="userEmailLogIn">Your Email:</label>
+                    <input type="email" id="userEmailLogIn" placeholder="Enter Your Email...">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+               
+                <div class="form-control ">
+                    <label for="userPassLogIn">Your Password:</label>
+                    <input type="password" id="userPassLogIn" placeholder="Enter Your Password..">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+
+                <div class="form-flex">
+                    <input type="checkbox" style="display: inline-block;"><h6>Remember Me</h6>
+                </div>
+                
+                <button type="button" id="logInBtn">Log In</button>
+                
+                <div class="form-last">
+                    <a href="#">Forgot Password?</a>
+                </div>
+
+
+            </form>
+
+            <form class="form" id="formSignUp">
+            
+                <div class="header">
+                    <h2>Sign Up</h2>
+                    <i class="fas fa-times" onclick="document.getElementById('myModal').style.display='none'"></i>
+                </div>
+
+                <div class="form-control ">
+                    <label for="userNameSignUp">Enter Your Name:</label>
+                    <input type="text" id="userNameSignUp" placeholder="Your Name...">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+
+                <div class="form-control ">
+                    <label for="userEmailSignUp">Enter Email:</label>
+                    <input type="email" id="userEmailSignUp" placeholder="Your Email...">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+               
+                <div class="form-control ">
+                    <label for="userPassSignUp1">Enter Password:</label>
+                    <input type="password" id="userPassSignUp1" placeholder="Enter Password..">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+                <div class="form-control ">
+                    <label for="userPassSignUp2">Confirm Password:</label>
+                    <input type="password" id="userPassSignUp2" placeholder="Enter Again Password..">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+                
+                <div class="form-flex">
+                    <input type="checkbox" style="display: inline-block;"><h6>I Accept the <a href="#">Terms Of Use</a> & <a href="#">Privacy Policy</a></h6>
+                </div>
+
+                <button type="button" id="signUpBtn">Sign Up</button>
+                
+
+
+            </form>
+
+        </div>
+      
+    </div>
+    
+
+    <!-- Footer Starts -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-col">
+                   <div class="chat-desc">
+                      <h3>Chatkhara Meal</h3>
+                       <p>Welcome to the home of delicious savours.
+                        CHATKHARA MEAL - A quick service restaurant made to look after your hunger pangs.</p>
+                        <p>Our mission is to give our customers the most authentic and artisanal online experience of Food at the best price. </p>
+                        <p>
+                        Delivering with CHATKHARA MEAL , you get flexibility and fair prices</p>
+                       <ul>
+                       <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                       <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                       <li><a href="#"><i class="fa fa-google"></i></a></li>
+                       <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                       </ul>
+                    </div>
+                </div>      
+                 <div class="footer-col">
+                      <div class="info">
+                        <h3>INFORMATION</h3>
+                        <p>If You Have Any Suggestion, Information Or Want To Complain, Reach Us At :</p>
+                          <div class="caht-personal">
+                            <p><span>Tel :</span> +92 123 456 789</p>
+                            <p><span>Email :</span> contact@chatkharameal.com</p>
+                            <p><span>Working Hours :</span> 9am-9pm</p>
+                          </div>
+                    </div>
+                </div>      
+                 <div class="footer-col">
+                      <div class="chat-insta">
+                           <h3>INSTAGRAM</h3>
+                            <div class="chat-images">
+                            <img src="./images/subscribe-footer-images/subscribe.jpg" alt="img">
+                            <img src="./images/subscribe-footer-images/salted-chips.jpg" alt="img">
+                            <img src="./images/subscribe-footer-images/popcorn.jpg" alt="img">
+                            <img src="./images/subscribe-footer-images/nimco_mix.jpeg" alt="img">
+                            <img src="./images/subscribe-footer-images/subscribe.jpg" alt="img">
+                            <img src="./images/subscribe-footer-images/salted-chips.jpg" alt="img">
+                          </div>        
+                    </div>
+                </div>      
+            </div>
+        </div>
+    
+        <div class="footer-copyright">
+            <p>&copy; Copyright <strong><i class="fab fa-hotjar"></i> Chatkhara Meal</strong>. All Rights Reserved</p>
+            <p>Designed by <span>Team Malam Jabba</span></p>
+        </div>
+
+    </footer>
+    <!-- Footer Ends -->
+
+
+
+    
+    <!-- Slick Slider -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- Sweet Alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- Custom JS -->
+    <script src="./js/script.js"></script>
+    <script src="./js/greetUser.js"></script>
+    <!-- Slider -->
+    <script src="./js/slider.js"></script>
+    <script src="./js/loader.js"></script>
+    <script src="./js/fastfood.js"></script>
+
+</body>
+
+
+</html>
