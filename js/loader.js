@@ -1,4 +1,5 @@
-var preloader = document.getElementById('loader');
-function preLoaderHandler(){
+let preloader = document.getElementById('loader');
+setTimeout(function preLoaderHandler(){
     preloader.style.display = 'none';
-}
+}, 1000);
+

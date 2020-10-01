@@ -14,11 +14,14 @@
     <link rel="stylesheet" href="./Css-Files/style.css" />
     <!-- Model Styling -->
     <link rel="stylesheet" href="./Css-Files/signform.css">
+    <link rel="stylesheet" href="./Css-Files/loader.css">
+
 
     <title>Chatkhara Meal | About Us</title>
 </head>
 
-<body>
+<body onload="preLoaderHandler()">
+    <div id="loader"></div>
     <!-- Header Starts -->
     <header>
         <div class="topNav">
@@ -327,5 +330,7 @@
     <!-- Custom JS -->
     <script src="./js/script.js"></script>
     <script src="./js/greetUser.js"></script>
+    <script src="./js/loader.js"></script>
+    <script src="./js/checkout.js"></script>
 </body>
 </html>
