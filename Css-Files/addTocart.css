@@ -217,31 +217,22 @@ table .displayCart .hide{
     padding: 8px 10px;
     outline: none;
 } 
-.subTotal h3, h4{
-    color: #333;
-    padding: 12px 0;
-}
-.subTotal span{
-    color: #f46107;
-    font-weight: bold;
-}
 .subTotal input:focus{
     outline: none;
 }
 .subTotal .border-h1{
-    color: #333;
     border-bottom: 1px solid #a5a0a0;
     padding: 5px 0;
 }
 .subTotal .border-h4{
     border-top: 1px solid #a5a0a0;
-    padding: 12px 0;
+    padding: 5px 0;
     margin: 0;
 }
 .subTotal .Order-placed{
     display: block;
     padding: 8px 60px;
-    margin: 15px 0;
+    margin: 5px;
     border: 1px solid #f46107;
     background-color:#ffbd59;
     color: #f46107;
@@ -252,7 +243,6 @@ table .displayCart .hide{
     font-weight: bold;
     cursor: pointer;
 }
-
 .subTotal .Order-placed:focus{
     outline: none;
 }
