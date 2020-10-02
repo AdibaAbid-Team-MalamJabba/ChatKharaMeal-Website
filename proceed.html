@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fav Icon -->
+    <link rel="icon" href="./images/Logo/favicon.png" type="image/x-icon">
+    <!-- FontAwsome Link -->
+    <script src="https://kit.fontawesome.com/418d14164c.js" crossorigin="anonymous"></script>
+    <!-- Sweet Alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- Css File -->
+    <link rel="stylesheet" href="./Css-Files/style.css">
+    <link rel="stylesheet" href="./Css-Files/addTocart.css">
+    <!-- Model Styling -->
+    <link rel="stylesheet" href="./Css-Files/signform.css">
+    <link rel="stylesheet" href="./Css-Files/loader.css">
+    <link rel="stylesheet" href="./Css-Files/proceed.css">
+
+    <title>Proceed To Checkout | Chatkhara Meal</title>
+</head>
+
+<body onload="preLoaderHandler()">
+    <div id="loader"></div>
+
+    <!-- Header Starts -->
+    <header>
+        <div class="topNav">
+            <div class="topnav-left">
+                <h5>Welcome <span id="userGreetingName">User</span> To Chatkhara Meal</h5>
+            </div>
+            <div class="search-container">
+                <form action="#">
+                  <input type="text" placeholder="Search Here.." class="search-input">
+                  <button type="submit" class="search-btn"> <i class="fas fa-search"></i></button>
+                </form>
+                <div class="form-right">
+                    <button class="btn-tool-tip">
+                        <a href="./wishList.html"><i class="fas fa-heart"></i>
+                            <span class="span-wish">0</span>
+                        </a>
+                    </button>
+                    <button class="btn-tool-tip"><a href="#">
+                            <i class="fas fa-user-circle" onclick="document.getElementById('myModal').style.display='block'"></i></a>
+                    </button>
+                </div>
+              </div>
+        </div>
+        <div class="midNav">
+             <a href="./index.html"><img src="./images/Logo/Logo-Chatkhara-01.png"alt="Chatkhara Meal Logo"></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#menu-section">Menu</a></li>
+                <li><a href="aboutUS.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          
+            <i class="fas fa-bars"></i>
+              
+        </div>
+        
+    </header>
+    <!-- Header Ends -->
+
+    <!-- Navigation categories -->
+    <div class="navigation-bar">
+        <nav class="nav-categories">
+            <ul>
+                <li><a href="./categories/fastFood.html"><i class="fas fa-hamburger"></i> FastFood</a></li>
+                <li><a href="./categories/snacks.html"><i class="fas fa-cookie"></i> Snacks</a></li>
+                <li><a href="./categories/bakery-items.html"><i class="fas fa-bread-slice"></i> Bakery</a></li>
+                <li><a href="./categories/chatkhara.html"><i class="fab fa-hotjar"></i> Chatkhara Meal</a></li>
+                <li class="add-to-cart">
+                    <a href="./checkOut.html" >
+                        <span class="span-cart">0</span>
+                        <i class="fas fa-cart-plus"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!-- Navigation categories Ends-->
+
+    <main>
+        <div class="usercreateacc">
+            <p>Don't Have Account ?? <button  onclick="document.getElementById('myModal').style.display='block'">Create It</button></p>
+        </div>
+        <section class="user-info-sec">
+            <h1 class="title">CHECK OUT</h1>
+            <div class="user-total-info-cont">
+
+                <div class="user-personal-info">
+                    <h2>Your Information:</h2>
+                    <form action="#">
+                        <div class="form-control">
+                            <label for="userfullname">Full Name:</label>
+                            <input type="text" id="userfullname" required>
+                            <small></small>
+                        </div>
+                        <div class="form-control">
+                            <label for="userperemail">Email:</label>
+                            <input type="email" id="userperemail" required>
+                            <small></small>
+                        </div>
+                        
+                        <div class="form-control">
+                            <label for="useraddress">Full Adress:</label>
+                            <input type="text" id="useraddress" required>
+                            <small></small>
+                        </div>
+
+                        <div class="user-city-state">
+                            <div class="form-control">
+                                <label for="usercity">City:</label>
+                                <input type="text" id="usercity" required>
+                                <small></small>
+                                <span>City & State Must Be In Pakistan</span>
+                            </div>
+                            <div class="form-control">
+                                <label for="userstate">State:</label>
+                                <input type="text" id="userstate" required>
+                                <small></small>
+                            </div>
+                        </div>
+                        <div class="form-control">
+                            <label for="userphone">Phone:</label>
+                            <input type="tel" id="userphone" required>
+                            <small></small>
+                        </div>
+                    </form>
+
+                </div>
+
+                <div class="user-orderr-sum">
+                    <div class="subTotal">
+                        <h1 class="border-h1">Order Summary</h1>
+                        <h4>Number Of Items In Cart: <span id="numItem"></span></h4>
+                        <h4>Sub Total:</h4>
+                        <span class="Total">Rs. 0</span>
+                        <h4>Delivery Charges:</h4>
+                        <span>Rs. 200</span>
+                        <h4 class="border-h4 ">Grand Total:</h4>
+                        <b><span class="grandTotal">Rs. 0</span></b>
+                        <button class="Order-placed" id="usercheckout"><a href="#">Checkout</a></button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Model Signin Signup -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+
+            <div class="button-container">
+                <button type="button" class="toggle-btn" id="toggle-login">Log In</button>
+                <button type="button" class="toggle-btn" id="toggle-signup">Sign Up</button>
+            </div>
+
+
+            <form class="form" id="formlogIn">
+            
+                <div class="header">
+                    <h2>Log In</h2>
+                    <i class="fas fa-times" onclick="document.getElementById('myModal').style.display='none'"></i>
+                </div>
+
+
+                <div class="form-control ">
+                    <label for="userEmailLogIn">Your Email:</label>
+                    <input type="email" id="userEmailLogIn" placeholder="Enter Your Email...">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+            
+                <div class="form-control ">
+                    <label for="userPassLogIn">Your Password:</label>
+                    <input type="password" id="userPassLogIn" placeholder="Enter Your Password..">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+
+                <div class="form-flex">
+                    <input type="checkbox" style="display: inline-block;"><h6>Remember Me</h6>
+                </div>
+                
+                <button type="button" id="logInBtn">Log In</button>
+                
+                <div class="form-last">
+                    <a href="#">Forgot Password?</a>
+                </div>
+
+
+            </form>
+
+            <form class="form" id="formSignUp">
+            
+                <div class="header">
+                    <h2>Sign Up</h2>
+                    <i class="fas fa-times" onclick="document.getElementById('myModal').style.display='none'"></i>
+                </div>
+
+                <div class="form-control ">
+                    <label for="userNameSignUp">Enter Your Name:</label>
+                    <input type="text" id="userNameSignUp" placeholder="Your Name...">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+
+                <div class="form-control ">
+                    <label for="userEmailSignUp">Enter Email:</label>
+                    <input type="email" id="userEmailSignUp" placeholder="Your Email...">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+            
+                <div class="form-control ">
+                    <label for="userPassSignUp1">Enter Password:</label>
+                    <input type="password" id="userPassSignUp1" placeholder="Enter Password..">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+                <div class="form-control ">
+                    <label for="userPassSignUp2">Confirm Password:</label>
+                    <input type="password" id="userPassSignUp2" placeholder="Enter Again Password..">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+                
+                <div class="form-flex">
+                    <input type="checkbox" style="display: inline-block;"><h6>I Accept the <a href="#">Terms Of Use</a> & <a href="#">Privacy Policy</a></h6>
+                </div>
+
+                <button type="button" id="signUpBtn">Sign Up</button>
+                
+
+
+            </form>
+
+        </div>
+    
+    </div>
+        
+        
+    <!-- Footer start -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-col">
+                <div class="chat-desc">
+                    <h3>Chatkhara Meal</h3>
+                    <p>Welcome to the home of delicious savours.
+                        CHATKHARA MEAL - A quick service restaurant made to look after your hunger pangs.</p>
+                        <p>Our mission is to give our customers the most authentic and artisanal online experience of Food at the best price. </p>
+                        <p>
+                        Delivering with CHATKHARA MEAL , you get flexibility and fair prices</p>
+                    <ul>
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                    </div>
+                </div>      
+                <div class="footer-col">
+                    <div class="info">
+                        <h3>INFORMATION</h3>
+                        <p>If You Have Any Suggestion, Information Or Want To Complain, Reach Us At :</p>
+                        <div class="caht-personal">
+                            <p><span>Tel :</span> +92 123 456 789</p>
+                            <p><span>Email :</span> contact@chatkharameal.com</p>
+                            <p><span>Working Hours :</span> 9am-9pm</p>
+                        </div>
+                    </div>
+                </div>      
+                <div class="footer-col">
+                    <div class="chat-insta">
+                        <h3>INSTAGRAM</h3>
+                        <div class="chat-images">
+                            <img src="./images/subscribe-footer-images/subscribe.jpg" alt="img">
+                            <img src="./images/subscribe-footer-images/salted-chips.jpg" alt="img">
+                            <img src="./images/subscribe-footer-images/popcorn.jpg" alt="img">
+                            <img src="./images/subscribe-footer-images/nimco_mix.jpeg" alt="img">
+                            <img src="./images/subscribe-footer-images/subscribe.jpg" alt="img">
+                            <img src="./images/subscribe-footer-images/salted-chips.jpg" alt="img">
+                        </div>        
+                    </div>
+                </div>      
+            </div>
+        </div>
+    
+        <div class="footer-copyright">
+            <p>&copy; Copyright <strong><i class="fab fa-hotjar"></i> Chatkhara Meal</strong>.  All Rights Reserved</p>
+            <p>Designed by <span>Team Malam Jabba</span></p>
+        </div>
+
+    </footer>
+    <!-- footer End -->
+
+    <!-- Sweet Alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- Custom JS -->
+    <script src="./js/script.js"></script>
+    <script src="./js/proceed.js"></script>
+    <script src="./js/greetUser.js"></script>
+    <script src="./js/loader.js"></script>
+</body>
+</html>
