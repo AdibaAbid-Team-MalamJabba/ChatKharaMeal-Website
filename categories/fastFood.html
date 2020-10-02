@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="../Css-Files/style.css">
     <link rel="stylesheet" href="../Css-Files/signform.css">
     <link rel="stylesheet" href="../Css-Files/loader.css">
+    <!-- SweetAlert Link -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 
     <title>Fast Food | Chatkhara Meal</title>
 </head>
@@ -34,7 +37,9 @@
                 </form>
                 <div class="form-right">
                     <button class="btn-tool-tip">
-                        <a href="#"><i class="fas fa-heart"></i></a>
+                        <a onclick="checkValidation()"><i class="fas fa-heart"></i>
+                            <span class="span-wish">0</span>
+                        </a>
                     </button>
                     <button class="btn-tool-tip"><a href="#">
                             <i class="fas fa-user-circle" onclick="document.getElementById('myModal').style.display='block'"></i></a>

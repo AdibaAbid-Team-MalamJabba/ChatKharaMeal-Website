@@ -1,6 +1,22 @@
+const wishSpan = document.querySelector('.span-wish')
+const spanCart = document.querySelector('.span-cart')
 
+document.addEventListener('DOMContentLoaded', () => {
 
-// Humberger
+    wishSpan.style.opacity = 1
+
+    // onLoad addtocart number
+    addToCartNumber()
+})
+function addToCartNumber(){
+    let addToCartNumbers = localStorage.getItem('cartNumbers')
+    spanCart.innerHTML = addToCartNumbers;
+
+    let wishCartNumbers = localStorage.getItem('wishList')
+    wishSpan.innerHTML = wishCartNumbers
+}
+
+// Hamburger
 let menuBtn = document.querySelector('.fa-bars');
 let sideNav = document.querySelector('.midNav ul');
 
@@ -251,3 +267,17 @@ const greetUser = () =>{
 }
 
 
+function checkValidation(){
+    let userName = localStorage.getItem("userName")
+    let userEmail = localStorage.getItem("userEmail")
+    if(userName || userEmail){
+        window.location.href = 'wishList.html';
+    }
+    else{
+        swal({
+            title:"Please Login First to use this Feature!",
+            icon: "warning",
+        })
+    }
+
+}
