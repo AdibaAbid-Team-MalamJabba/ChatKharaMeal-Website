@@ -4,7 +4,7 @@ const grandTotalAmount = document.querySelector('.grandTotal')
 const checkoutValidation = document.querySelector('.checkout-validation')
 const spanCart = document.querySelector('.span-cart')
 const wishListSpan = document.querySelector('.span-wish')
-const proceedCheckout = document.querySelector('.Order-placed');
+const proceedCheckout = document.getElementById('proceedToCheck');
 
 document.addEventListener('DOMContentLoaded', () => {
     // onLoad addtocart number
@@ -211,9 +211,15 @@ proceedCheckout.addEventListener('click' , (e)=>{
     e.preventDefault();
     console.log('Clicked');
     let cart = JSON.parse(localStorage.getItem("productsCart"));
+    let totalCost = JSON.parse(localStorage.getItem('totalCost'))
     if (cart === null) {
         swal({
             title: "1st Add Items To Your Cart !!",
+            icon: "info",
+        });
+    }else if (totalCost < 300) {
+        swal({
+            title: "Order Must Be Greater Then Rs. 300/-",
             icon: "info",
         });
     }
