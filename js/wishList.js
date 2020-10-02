@@ -1,5 +1,5 @@
 let displayWishCart = document.querySelector('.displayWishCart')
-const spanCart = document.querySelector('.span-cart')
+const spanCart1 = document.querySelector('.span-cart')
 const wishListSpan = document.querySelector('.span-wish')
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //this function never run on event listener, Load on windows Load.
 function addToCartNumber(){
     let addToCartNumbers = localStorage.getItem('cartNumbers')
-    spanCart.innerHTML = addToCartNumbers;
+    spanCart1.innerHTML = addToCartNumbers;
 
     let wishCartNumbers = localStorage.getItem('wishList')
     wishListSpan.innerHTML = wishCartNumbers

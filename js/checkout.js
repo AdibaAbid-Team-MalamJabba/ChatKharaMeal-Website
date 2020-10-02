@@ -4,7 +4,7 @@ const grandTotalAmount = document.querySelector('.grandTotal')
 const checkoutValidation = document.querySelector('.checkout-validation')
 const spanCart = document.querySelector('.span-cart')
 const wishListSpan = document.querySelector('.span-wish')
-
+const proceedCheckout = document.querySelector('.Order-placed');
 
 document.addEventListener('DOMContentLoaded', () => {
     // onLoad addtocart number
@@ -206,3 +206,19 @@ function checkValidation(){
     }
 
 }
+
+proceedCheckout.addEventListener('click' , (e)=>{
+    e.preventDefault();
+    console.log('Clicked');
+    let cart = JSON.parse(localStorage.getItem("productsCart"));
+    if (cart === null) {
+        swal({
+            title: "1st Add Items To Your Cart !!",
+            icon: "info",
+        });
+    }
+    else{
+        window.location.href = './proceed.html';
+    }
+})
+
