@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // onLoad addtocart number
     addToCartNumber()
 })
+
 function addToCartNumber(){
     let addToCartNumbers = localStorage.getItem('cartNumbers')
     spanCart.innerHTML = addToCartNumbers;
@@ -87,6 +88,7 @@ logInFormBtn.addEventListener('click', e => {
         setTimeout(()=>{
             document.getElementById("myModal").style.display = "none";
         },1000);
+        window.location.reload();
     }
     else{
         return false;
@@ -127,7 +129,7 @@ const checkLoginInputs = () => {
         setErrorFor(userPasswordLi, "Enter Valid Password !");
         return false;
     }
-    else if (userEmailValue === JSON.parse(localStorage.getItem('userEmail')) && userPassValue === JSON.parse(localStorage.getItem('userPassword'))) {
+    else if (userEmailValue === localStorage.getItem('userEmail') && userPassValue === localStorage.getItem('userPassword')) {
        return true;
     } else {
         return false;
@@ -164,7 +166,6 @@ signUpFormBtn.addEventListener('click', e => {
     if(checkSignupInputs()){
         swal("Good job!", "Created Account Successfully !!!!", "success");
         greetUser();
-        emptySignupInputs();
         setTimeout(()=>{
             document.getElementById("myModal").style.display = "none";
         },1000);
@@ -186,7 +187,7 @@ const checkSignupInputs = () => {
         setErrorFor(userNameSu, "Name Can't Be Blank !!");
     } else {
         setSuccessFor(userNameSu);
-        userData.push(localStorage.setItem('userName',  JSON.stringify(userNameValue)));
+        userData.push(localStorage.setItem('userName',  userNameValue));
     }
 
 
@@ -199,7 +200,7 @@ const checkSignupInputs = () => {
         return false;
     } else {
         setSuccessFor(userEmailSu);
-        userData.push(localStorage.setItem('userEmail',  JSON.stringify(userEmailValue)));
+        userData.push(localStorage.setItem('userEmail', userEmailValue));
     }
 
     //Sign up Password Validation
@@ -218,7 +219,7 @@ const checkSignupInputs = () => {
     }else {
         setSuccessFor(userPasswordSu1);
         setSuccessFor(userPasswordSu2);
-        userData.push(localStorage.setItem('userPassword', JSON.stringify(userPassValue2)));
+        userData.push(localStorage.setItem('userPassword',userPassValue2));
         return true;
     }
 
@@ -257,13 +258,6 @@ const isEmail = (email) => {
 // Check Password Matches Or Not 
 const passwordMatch = (pass1, pass2) => {
     return pass1 === pass2;
-}
-
-// Greet USer
-
-const greetUser = () =>{
-    let targetArea = document.getElementById('userGreetingName');
-    targetArea.innerHTML = JSON.parse(localStorage.getItem('userName')); 
 }
 
 
