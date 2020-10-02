@@ -37,9 +37,7 @@
                 </form>
                 <div class="form-right">
                     <button class="btn-tool-tip">
-                        <a onclick="checkValidation()"><i class="fas fa-heart"></i>
-                            <span class="span-wish">0</span>
-                        </a>
+                        <a href="#"><i class="fas fa-heart"></i></a>
                     </button>
                     <button class="btn-tool-tip"><a href="#">
                             <i class="fas fa-user-circle" onclick="document.getElementById('myModal').style.display='block'"></i></a>
@@ -115,15 +113,14 @@
                         <span>Rs. 200</span>
                         <h4 class="border-h4 ">Grand Total:</h4>
                         <b><span class="grandTotal">Rs. 0</span></b>
-                        <button class="Order-placed">Proceed Checkout</button>
+                        <button class="Order-placed" id="proceedBtn"><a href="./proceed.html">Proceed Checkout</a></button>
                     </div>
                 </div>
             </div>
         </section>
         
     </main>
-    <!-- Check Out Js -->
-    <script src="./js/checkout.js"></script>
+    
 
         <!-- Model Signin Signup -->
         <div id="myModal" class="modal">
@@ -288,6 +285,8 @@
     <script src="./js/script.js"></script>
     <script src="./js/greetUser.js"></script>
     <script src="./js/loader.js"></script>
+    <!-- Check Out Js -->
+    <script src="./js/checkout.js"></script>
 
 </body>
 </html>

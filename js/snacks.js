@@ -1,13 +1,12 @@
 const productContainer = document.querySelector('.product-container')
 const spanCartItems = document.querySelector('.span-cart')
-const wishListSpan = document.querySelector('.span-wish')
 
 document.addEventListener('DOMContentLoaded', () => {
     //get all Products
     getProducts()
     // onLoad addtocart number
     addToCartNumber()
-    wishListSpan.style.opacity = 1
+
 })
 
 
@@ -22,35 +21,12 @@ async function getProducts() {
 
         // set Listener to add to cart button and set numbers to addtocart icon
         let cartButton = document.querySelectorAll('.cart-btn')
-        let wishListButton = document.querySelectorAll('.wishlist')
-
         for (let i = 0; i < cartButton.length; i++) {
             cartButton[i].addEventListener('click', () => {
                 let products = data.Snacksproducts
                //sent clicked item data
                 cartNumber({...products[i], inCart: 0})
                 
-            })
-        }
-        for (let j = 0; j < wishListButton.length; j++) {
-            wishListButton[j].addEventListener('click', () => {
-                
-                let products = data.Snacksproducts
-                let wishListObjs = JSON.parse(localStorage.getItem('wishListObjs'))
-                let title = wishListButton[j].parentElement.parentElement.children[0].innerHTML
-
-                // Check wishList item is already exist
-                if (wishListObjs != null) {
-                    if (wishListObjs[title] === undefined) {
-                        cartNumber({ ...products[j], isWishList: true})
-                    }
-                    else {
-                        swal("Ooppss!", "Already Added to WishList ♥!", "info");
-                    }
-                }
-                else {
-                    cartNumber({ ...products[j], isWishList: true })
-                }
             })
         }
     } 
@@ -77,7 +53,7 @@ function displayProduct(products) {
                 <h2 class="product-title">${item.title}</h2>
                 <p class="product-price">Rs: ${item.price}.00/-</p>
                 <div class="product-btn-container">
-                    <a class="product-btn wishlist" data-id=${item.id}><i class="fas fa-list-ul"></i> Wishlist</a>
+                    <a href="#" class="product-btn" data-id=${item.id}><i class="fas fa-list-ul"></i> Wishlist</a>
                     <a href="${item.view}" target = "_blank" class="product-btn"><i class="fas fa-eye"></i> View</a>
                 </div>
                 <div class="add-container">
@@ -91,90 +67,47 @@ function displayProduct(products) {
 }
 
 //this function never run on event listener, Load on windows Load.
-function addToCartNumber() {
+function addToCartNumber(){
     let addToCartNumbers = localStorage.getItem('cartNumbers')
     spanCartItems.innerHTML = addToCartNumbers;
-    let wishCartNumbers = localStorage.getItem('wishList')
-    wishListSpan.innerHTML = wishCartNumbers
 }
 
 // set numbers on addtocart span
 function cartNumber(products) {
-    if (!products.isWishList) {
-        let productNumbers = localStorage.getItem('cartNumbers')
-        productNumbers = parseInt(productNumbers)
-        if (productNumbers) {
-            localStorage.setItem('cartNumbers', productNumbers + 1)
-            spanCartItems.innerHTML = productNumbers + 1
-        } else {
-            localStorage.setItem('cartNumbers', 1)
-            spanCartItems.innerHTML = 1
-        }
-        setItems(products)
+    let productNumbers = localStorage.getItem('cartNumbers')
+    productNumbers = parseInt(productNumbers)
+    if (productNumbers) {
+        localStorage.setItem('cartNumbers', productNumbers + 1)
+        spanCartItems.innerHTML = productNumbers + 1
+    } else {
+        localStorage.setItem('cartNumbers', 1)
+        spanCartItems.innerHTML = 1
     }
-    else {
-        let wishListNumber = parseInt(localStorage.getItem('wishList'))
-        if (wishListNumber) {
-            localStorage.setItem('wishList', wishListNumber + 1)
-            wishListSpan.innerHTML = wishListNumber + 1
-            console.log('my wishlist if already exist*****', parseInt(wishListNumber) + 1)
-            setItems(products)
-            swal("Added to WishList ♥!", "Successfully added to your WishList", "success")
-        }
-        else {
-            let storedWishCartNumber = localStorage.setItem('wishList', 1)
-            wishListSpan.innerHTML = 1
-            console.log('my wishlist*****', parseInt(storedWishCartNumber) + 1)
-            setItems(products)
-            swal("Added to WishList ♥!", "Successfully added to your WishList", "success")
-        }
-    }
+    setItems(products)
 }
 
-function setItems(products) {
-    if (!products.isWishList) {
-        let cartItem = localStorage.getItem('productsCart')
-        cartItem = JSON.parse(cartItem)
-        console.log('my product is', products)
+function setItems(products){
+    let cartItem = localStorage.getItem('productsCart')
+    cartItem = JSON.parse(cartItem)
+    console.log('my product is', products)
 
-        if (cartItem != null) {
-            if (cartItem[products.title] == undefined) {
-                cartItem = {
-                    ...cartItem,
-                    [products.title]: products
-                }
-            }
-            cartItem[products.title].inCart += 1
-        } else {
-            products.inCart = 1
-            cartItem = {
-                [products.title]: products
+    if(cartItem != null ){
+        if(cartItem[products.title] == undefined){
+            cartItem ={
+                ...cartItem,
+                [products.title] : products
             }
         }
-        localStorage.setItem('productsCart', JSON.stringify(cartItem))
-        totalCost(products)
-    }
-    else {
-        let wishListItem = JSON.parse(localStorage.getItem('wishListObjs'))
-        console.log('my wishlistobjects is', wishListItem)
-
-        if (wishListItem != null) {
-            if (wishListItem[products.title] == undefined) {
-                wishListItem = {
-                    ...wishListItem,
-                    [products.title]: products
-                }
-            }
-        } else {
-            wishListItem = {
-                ...wishListItem,
-                [products.title]: products
-            }
+        cartItem[products.title].inCart += 1
+    } else{
+        products.inCart = 1
+        cartItem = {
+            [products.title]: products
         }
-        localStorage.setItem('wishListObjs', JSON.stringify(wishListItem))
     }
+   localStorage.setItem('productsCart', JSON.stringify(cartItem) )
+   totalCost(products)
 }
-
 
 
 //Set total cost in local storage  
@@ -189,19 +122,4 @@ function totalCost(product){
     } else{
         localStorage.setItem('totalCost', product.price)
     }
-}
-
-function checkValidation(){
-    let userName = localStorage.getItem("userName")
-    let userEmail = localStorage.getItem("userEmail")
-    if(userName || userEmail){
-        window.location.href = '../wishList.html';
-    }
-    else{
-        swal({
-            title:"Please Login First to use this Feature!",
-            icon: "warning",
-        })
-    }
-
 }

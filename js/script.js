@@ -1,22 +1,6 @@
-const wishSpan = document.querySelector('.span-wish')
-const spanCart = document.querySelector('.span-cart')
 
-document.addEventListener('DOMContentLoaded', () => {
 
-    wishSpan.style.opacity = 1
-
-    // onLoad addtocart number
-    addToCartNumber()
-})
-function addToCartNumber(){
-    let addToCartNumbers = localStorage.getItem('cartNumbers')
-    spanCart.innerHTML = addToCartNumbers;
-
-    let wishCartNumbers = localStorage.getItem('wishList')
-    wishSpan.innerHTML = wishCartNumbers
-}
-
-// Hamburger
+// Humberger
 let menuBtn = document.querySelector('.fa-bars');
 let sideNav = document.querySelector('.midNav ul');
 
@@ -87,6 +71,7 @@ logInFormBtn.addEventListener('click', e => {
         setTimeout(()=>{
             document.getElementById("myModal").style.display = "none";
         },1000);
+        window.location.reload();
     }
     else{
         return false;
@@ -127,13 +112,14 @@ const checkLoginInputs = () => {
         setErrorFor(userPasswordLi, "Enter Valid Password !");
         return false;
     }
-    else if (userEmailValue === JSON.parse(localStorage.getItem('userEmail')) && userPassValue === JSON.parse(localStorage.getItem('userPassword'))) {
+    else if (userEmailValue === localStorage.getItem('userEmail') && userPassValue === localStorage.getItem('userPassword')) {
        return true;
     } else {
         return false;
     }
 
 }
+
 // Revert Back Changes 
 const emptyLoginInputs = () => {
     document.getElementById('userEmailLogIn').value = '';
@@ -163,7 +149,6 @@ signUpFormBtn.addEventListener('click', e => {
 
     if(checkSignupInputs()){
         swal("Good job!", "Created Account Successfully !!!!", "success");
-        greetUser();
         emptySignupInputs();
         setTimeout(()=>{
             document.getElementById("myModal").style.display = "none";
@@ -186,7 +171,7 @@ const checkSignupInputs = () => {
         setErrorFor(userNameSu, "Name Can't Be Blank !!");
     } else {
         setSuccessFor(userNameSu);
-        userData.push(localStorage.setItem('userName',  JSON.stringify(userNameValue)));
+        userData.push(localStorage.setItem('userName',  userNameValue));
     }
 
 
@@ -199,7 +184,7 @@ const checkSignupInputs = () => {
         return false;
     } else {
         setSuccessFor(userEmailSu);
-        userData.push(localStorage.setItem('userEmail',  JSON.stringify(userEmailValue)));
+        userData.push(localStorage.setItem('userEmail',  userEmailValue));
     }
 
     //Sign up Password Validation
@@ -218,7 +203,7 @@ const checkSignupInputs = () => {
     }else {
         setSuccessFor(userPasswordSu1);
         setSuccessFor(userPasswordSu2);
-        userData.push(localStorage.setItem('userPassword', JSON.stringify(userPassValue2)));
+        userData.push(localStorage.setItem('userPassword', userPassValue2));
         return true;
     }
 
@@ -259,25 +244,5 @@ const passwordMatch = (pass1, pass2) => {
     return pass1 === pass2;
 }
 
-// Greet USer
-
-const greetUser = () =>{
-    let targetArea = document.getElementById('userGreetingName');
-    targetArea.innerHTML = JSON.parse(localStorage.getItem('userName')); 
-}
 
 
-function checkValidation(){
-    let userName = localStorage.getItem("userName")
-    let userEmail = localStorage.getItem("userEmail")
-    if(userName || userEmail){
-        window.location.href = 'wishList.html';
-    }
-    else{
-        swal({
-            title:"Please Login First to use this Feature!",
-            icon: "warning",
-        })
-    }
-
-}

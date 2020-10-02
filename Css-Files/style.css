@@ -118,18 +118,6 @@ form .search-btn:hover i{
 .form-right .btn-tool-tip span{
     display: none;
 }
-.form-right .btn-tool-tip .span-wish{
-    opacity: 0;
-    background-color: #f46107;
-    padding: 2px 5px;
-    color: #f6f6f6;
-    font-size: 11px;
-    right: -2px;
-    top: -5px;
-    position: absolute;
-    border-radius: 28%;
-    display: inline;
-}
 
 .form-right .btn-tool-tip i{
     color: #FF9900;

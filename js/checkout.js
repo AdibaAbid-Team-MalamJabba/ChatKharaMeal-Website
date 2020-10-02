@@ -3,13 +3,13 @@ const displayCartTable = document.querySelector('.displayCart')
 const grandTotalAmount = document.querySelector('.grandTotal')
 const checkoutValidation = document.querySelector('.checkout-validation')
 const spanCart = document.querySelector('.span-cart')
-const wishListSpan = document.querySelector('.span-wish')
-
 
 document.addEventListener('DOMContentLoaded', () => {
+    //show all Products
+    // showProducts()
     // onLoad addtocart number
     addToCartNumber()
-    wishListSpan.style.opacity = 1
+
 })
 
 
@@ -17,11 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function addToCartNumber(){
     let addToCartNumbers = localStorage.getItem('cartNumbers')
     spanCart.innerHTML = addToCartNumbers;
-
-    let wishCartNumbers = localStorage.getItem('wishList')
-    wishListSpan.innerHTML = wishCartNumbers
 }
-
 
 // set cart number in local storage
 function cartNumbers(product ,action) {
@@ -192,17 +188,4 @@ function manageQuantity(){
     })
 }
 }
-function checkValidation(){
-    let userName = localStorage.getItem("userName")
-    let userEmail = localStorage.getItem("userEmail")
-    if(userName || userEmail){
-        window.location.href = 'wishList.html';
-    }
-    else{
-        swal({
-            title:"Please Login First to use this Feature!",
-            icon: "warning",
-        })
-    }
 
-}
