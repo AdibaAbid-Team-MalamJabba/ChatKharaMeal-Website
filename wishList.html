@@ -19,7 +19,7 @@
 
 
 
-    <title>Checkout | Chatkhara Meal</title>
+    <title>WishList | Chatkhara Meal</title>
 </head>
 
 <body onload="preLoaderHandler()">
@@ -37,7 +37,7 @@
                 </form>
                 <div class="form-right">
                     <button class="btn-tool-tip">
-                        <a onclick="checkValidation()"><i class="fas fa-heart"></i>
+                        <a href="./wishList.html"><i class="fas fa-heart"></i>
                             <span class="span-wish">0</span>
                         </a>
                     </button>
@@ -85,29 +85,29 @@
     <main>
         <section class="addToCart">
             <div class="addtoCart-wraper">
-                <h2 class="title">Your Cart</h2>
-                <div class="checkout-validation">
+                <h2 class="title">Your Wish Cart</h2>
+                <!-- <div class="checkout-validation">
                     <i class="fas fa-exclamation-circle"></i> Cart total must be greater than Rs 300
-                </div>
-                <div class="addtocart-table">
+                </div> -->
+                <div class="wishlist-table">
                     <table>
-                        <caption>Order Details</caption>
+                        <!-- <caption>Order Details</caption> -->
                         <thead>
                             <tr>
                                 <th>#</th>
                                 <th scope="col"></th>
                                 <th scope="col" colspan="2">Item Name</th>
                                 <th scope="col" colspan="2">Price</th>
-                                <th scope="col" colspan="2">Quantity</th>
-                                <th scope="col" colspan="2">Sub Total</th>
+                                <!-- <th scope="col" colspan="2">Quantity</th>
+                                <th scope="col" colspan="2">Sub Total</th> -->
                                 <th></th>
                             </tr>
                         </thead>
-                        <tbody class="displayCart">
+                        <tbody class="displayWishCart">
                         <!-- Add data dynamically -->
                         </tbody>
                     </table>
-                    <div class="subTotal">
+                    <!-- <div class="subTotal">
                         <h1 class="border-h1">Delivery Details</h1>
                         <h4>Sub Total:</h4>
                         <span class="Total">Rs. 0</span>
@@ -116,14 +116,14 @@
                         <h4 class="border-h4 ">Grand Total:</h4>
                         <b><span class="grandTotal">Rs. 0</span></b>
                         <button class="Order-placed">Proceed Checkout</button>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
         
     </main>
     <!-- Check Out Js -->
-    <script src="./js/checkout.js"></script>
+    <script src="./js/wishList.js"></script>
 
         <!-- Model Signin Signup -->
         <div id="myModal" class="modal">
@@ -217,8 +217,6 @@
                     </div>
 
                     <button type="button" id="signUpBtn">Sign Up</button>
-                    
-
 
                 </form>
 
