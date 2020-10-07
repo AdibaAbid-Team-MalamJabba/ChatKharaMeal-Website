@@ -1585,6 +1585,17 @@ footer h3{
     .footer-row{
         flex-wrap: wrap;
     }
+
+    .navigation-bar nav ul li .fa-cart-plus::after{
+        width: 70px;
+        top: 45px;
+        left: 0px;
+        text-align: center;
+        font-size: 12px;
+        color: #FFFFFF;
+        font-weight: bold;
+    }
+
 }
 
 @media only screen and (max-width:700px) {
@@ -1592,8 +1603,8 @@ footer h3{
     .fa-bars{
         display: block;
         position: absolute;
-        right: 22px;
-        top: 60px;
+        right: 20px;
+        top: 110px;
         z-index: 1000;
         transition: all .5s ease;
     }
@@ -1639,17 +1650,10 @@ footer h3{
         color: #fff;
         top: 0px;
         right: 0px;
+        padding: 2px;
+        background-color: #FF9900 !important;
     }
 
-    .navigation-bar nav ul li .fa-cart-plus::after{
-        width: 70px;
-        top: 45px;
-        left: 0px;
-        text-align: center;
-        font-size: 12px;
-        color: #FFFFFF;
-        font-weight: bold;
-    }
 }
 
 /* For 600 */
@@ -1737,20 +1741,20 @@ footer h3{
     .navigation-bar nav ul li a{
         padding: 0 5px;
         font-weight: lighter;
-        font-size: 10px;
+        font-size: 12px;
     }
-
     .navigation-bar nav ul li a .span-cart{
-        top: 5px;
-        left: 16px;
-        font-size: 11px;
-        font-weight: bold;
+        top: 0px;
+        left: 20px;
+        padding: 0;
+        width: 20px;
+        height: 20px;
+        font-size: 16px;
         background: none;
+        text-align: center;
     }
 
     .navigation-bar nav ul li .fa-cart-plus::after{
-        top: 20px;
-        left: 15px;
         font-size: 10px;
     }
 }
@@ -1788,14 +1792,16 @@ footer h3{
     .navigation-bar nav ul li a .span-cart{
         top: 0px;
         left: 15px;
+        width: 15px;
+        height: 20px;
         font-size: 16px;
         background: none;
     }
 
     .navigation-bar nav ul li .fa-cart-plus::after{
-        top: 40px;
-        left: -20px;
         font-size: 8px;
+        width: 50px;
+        left: -20px;
     }
 }
 
@@ -1805,6 +1811,10 @@ footer h3{
         top: 78%;
     }
 
+    .navigation-bar nav ul li a{
+        text-align: center;
+    }
+
 }
 
 @media only screen and (max-width:360px) {
@@ -1812,20 +1822,24 @@ footer h3{
     .navigation-bar nav ul li a{
         padding: 0 5px;
         font-weight: lighter;
-        font-size: 8px;
+        font-size: 10px;
+        text-align: center;
     }
 
     .navigation-bar nav ul li a .span-cart{
-        top: 8px;
-        left: 15px;
-        font-size: 12px;
-        /* background: none; */
+        top: 5px;
+        left: 8px;
+        width: 12px;
+        height: 12px;
+        padding: 0px;
+        font-size: 10px;
+        background: none;
     }
 
     .navigation-bar nav ul li .fa-cart-plus::after{
         width: 50px;
-        top: 45px;
-        left: -20px;
+        top: 40px;
+        left: -25px;
         font-size: 6px;
     }
 
