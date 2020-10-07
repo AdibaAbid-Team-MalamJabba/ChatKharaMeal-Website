@@ -87,7 +87,7 @@
         }
 
     ],
-    "BakeryItemProducts":[
+    "bakeryItemProducts":[
         {
             "id":"1",
             "title":"Banana Bread",
@@ -173,7 +173,7 @@
             "image":"../images/bakeryitem-images/chicken-crispyPakorey.jpg"
         }
     ],
-    "Snacksproducts":[
+    "snacksProducts":[
         {
             "id":"1",
             "title":"Crinkle Chips",
