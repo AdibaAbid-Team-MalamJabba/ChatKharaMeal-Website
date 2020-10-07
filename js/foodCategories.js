@@ -1,16 +1,22 @@
 const productContainer = document.querySelector('.product-container')
 const spanCartItems = document.querySelector('.span-cart')
-const wishListSpan = document.querySelector('.span-wish')
+const wishListBtn = document.querySelector('.span-wish')
 
 document.addEventListener('DOMContentLoaded', () => {
+
     //get all Products
     getProducts()
     // onLoad addtocart number
     addToCartNumber()
-    wishListSpan.style.opacity = 1
+    wishListBtn.style.opacity = 1
 
 })
 
+
+//Select current page
+function currentCategoryPage(currentPage){
+    localStorage.setItem("selectedPage", currentPage)
+}
 
 // Getting The Products 
 async function getProducts() {
@@ -24,10 +30,11 @@ async function getProducts() {
         // set Listener to add to cart button and set numbers to addtocart icon
         let cartButton = document.querySelectorAll('.cart-btn')
         let wishListButton = document.querySelectorAll('.wishlist')
+        const currentPage = localStorage.getItem("selectedPage")
 
         for (let i = 0; i < cartButton.length; i++) {
             cartButton[i].addEventListener('click', () => {
-                let products = data.BakeryItemProducts
+                let products = data[currentPage]
                //sent clicked item data
                 cartNumber({...products[i], inCart: 0})
             })
@@ -35,7 +42,7 @@ async function getProducts() {
         for (let j = 0; j < wishListButton.length; j++) {
             wishListButton[j].addEventListener('click', () => {
                 
-                let products = data.BakeryItemProducts
+                let products = data[currentPage]
                 let wishListObjs = JSON.parse(localStorage.getItem('wishListObjs'))
                 let title = wishListButton[j].parentElement.parentElement.children[0].innerHTML
 
@@ -61,9 +68,11 @@ async function getProducts() {
 
 //Display Products
 function displayProduct(products) {
-    console.log(products)
+    const currentPage = localStorage.getItem("selectedPage")
+
+    console.log(products[currentPage])
     let result = '';
-    products.BakeryItemProducts.forEach(item => {
+    products[currentPage].forEach(item => {
         result += `
             <div class="product-item">
             <div class="img-wrapper">
@@ -94,7 +103,7 @@ function addToCartNumber(){
     let addToCartNumbers = localStorage.getItem('cartNumbers')
     spanCartItems.innerHTML = addToCartNumbers;
     let wishCartNumbers = localStorage.getItem('wishList')
-    wishListSpan.innerHTML = wishCartNumbers
+    wishListBtn.innerHTML = wishCartNumbers
 }
 
 
@@ -116,14 +125,14 @@ function cartNumber(products) {
         let wishListNumber = parseInt(localStorage.getItem('wishList'))
         if (wishListNumber) {
             localStorage.setItem('wishList', wishListNumber + 1)
-            wishListSpan.innerHTML = wishListNumber + 1
+            wishListBtn.innerHTML = wishListNumber + 1
             console.log('my wishlist if already exist*****', parseInt(wishListNumber) + 1)
             setItems(products)
             swal("Added to WishList ♥!", "Successfully added to your WishList", "success")
         }
         else {
             let storedWishCartNumber = localStorage.setItem('wishList', 1)
-            wishListSpan.innerHTML = 1
+            wishListBtn.innerHTML = 1
             console.log('my wishlist*****', parseInt(storedWishCartNumber) + 1)
             setItems(products)
             swal("Added to WishList ♥!", "Successfully added to your WishList", "success")
